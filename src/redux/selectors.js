@@ -1,0 +1,1 @@
+export const getTabMains = store=>store.tabMain;
