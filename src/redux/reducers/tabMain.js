@@ -1,4 +1,4 @@
-import { TAB_CHANGE } from "../actionTypes";
+import { TAB_CHANGE, TAB_ADD } from "../actionTypes";
 
 const defaultState = {
   activeKey: "1",
@@ -14,11 +14,20 @@ const defaultState = {
   ],
 };
 const tabMain = (state = defaultState, action) => {
-  console.log(action.type);
+ 
   switch (action.type) {   
     case TAB_CHANGE:{
       state.activeKey = action.activeKey;
       return {...state};
+    }
+    case TAB_ADD:{ 
+       const {panes} = state;
+       const key = action.payload.tabName;
+       panes.push({ title: 'New Tab', content: 'Content of new Tab', key: key });
+       state.activeKey = key;
+       return {...state};   
+      
+      
     }
     default:
       return state;
