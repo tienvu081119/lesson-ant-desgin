@@ -2,22 +2,22 @@ import React from "react";
 import { Menu } from "antd";
 import { useDispatch } from "react-redux";
 import { onAdd } from "../redux/action";
-
 import {
   MailOutlined,
   AppstoreOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
 
+
 const { SubMenu } = Menu;
 
 const Nav = () => {
 
   const dispatch = useDispatch();
-  return (
+  return (   
     <Menu theme="dark" mode="horizontal">
-      <Menu.Item key="4" icon={<AppstoreOutlined />} onClick={(e) =>dispatch(onAdd(e.key))}>
-        nav 1
+      <Menu.Item key="bus" icon={<AppstoreOutlined />} onClick={(e) =>dispatch(onAdd(e.key,"Bus"))}>
+        Bus
       </Menu.Item>
       <Menu.Item key="5" icon={<AppstoreOutlined />}>
         nav 2
@@ -25,7 +25,7 @@ const Nav = () => {
       <Menu.Item key="3" icon={<AppstoreOutlined />}>
         nav 3
       </Menu.Item>
-    </Menu>
+    </Menu>   
   );
 };
 

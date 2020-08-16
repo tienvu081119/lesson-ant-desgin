@@ -5,7 +5,7 @@ export const onChange = activeKey => ({
     payload: {activeKey}
 })
 
-export const onAdd = tabName =>({
+export const onAdd = (tabKey,tabTitle) =>({
     type: TAB_ADD,
-    payload:{ tabName}
+    payload:{ tabKey, tabTitle}
 })
