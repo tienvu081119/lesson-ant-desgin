@@ -16,11 +16,11 @@ const Nav = () => {
   const dispatch = useDispatch();
   return (   
     <Menu theme="dark" mode="horizontal">
-      <Menu.Item key="bus" icon={<AppstoreOutlined />} onClick={(e) =>dispatch(onAdd(e.key,"Bus"))}>
-        Bus
+      <Menu.Item key="userHome" icon={<AppstoreOutlined />} onClick={(e) =>dispatch(onAdd(e.key,"User"))}>
+        User
       </Menu.Item>
-      <Menu.Item key="5" icon={<AppstoreOutlined />}>
-        nav 2
+      <Menu.Item key="customerHome" icon={<AppstoreOutlined />} onClick={(e) =>dispatch(onAdd(e.key,"Customer"))}>
+        Customer
       </Menu.Item>
       <Menu.Item key="3" icon={<AppstoreOutlined />}>
         nav 3

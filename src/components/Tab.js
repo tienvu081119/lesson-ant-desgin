@@ -3,7 +3,7 @@ import { Tabs } from "antd";
 import { useSelector } from "react-redux";
 import { getTabMains } from "../redux/selectors";
 import { useDispatch } from 'react-redux';
-import { onChange } from '../redux/action';
+import { onChange, onRemove } from '../redux/action';
 
 const { TabPane } = Tabs;
 
@@ -16,6 +16,7 @@ const Tab = () => {
       type="editable-card"
       activeKey={activeKey}
       onChange={()=>dispath(onChange(activeKey))}
+      onEdit={()=>dispath(onRemove(activeKey))}
     >
       {panes.map((pane) => (
         <TabPane tab={pane.title} key={pane.key} closable={pane.closable}>
@@ -53,6 +54,7 @@ const Tab = () => {
 //   };
 
 //   onEdit = (targetKey, action) => {
+//     console.log(1,action);
 //     this[action](targetKey);
 //   };
 

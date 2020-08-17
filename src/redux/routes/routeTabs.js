@@ -1,9 +1,17 @@
 import React from 'react';
-import Bus from '../../components/Bus';
+import DashBoardHome from '../../components/DashBoard/Home';
+import UserHome from '../../components/User/Home';
+import CustomerHome from '../../components/Customer/Home';
 
-const arrayTab = [{
-    key: 'bus',
-    main: ()=> <Bus/>
+const array = [{
+    key: 'dashBoardHome',
+    component: () => <DashBoardHome />
+},{
+    key: 'userHome',
+    component: ()=> <UserHome />
+},{
+    key: 'customerHome',
+    component: () => <CustomerHome />
 }]
 
-export default arrayTab;
+export default array;
